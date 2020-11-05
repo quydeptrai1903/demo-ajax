@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "fullName": "Jolynn Trudgeon",
+    "email": "jtrudgeon0@marketwatch.com",
+    "gender": "Female"
+  },
+  {
+    "id": 2,
+    "fullName": "Drud Kasher",
+    "email": "dkasher1@printfriendly.com",
+    "gender": "Male"
+  },
+  {
+    "id": 3,
+    "fullName": "Kenneth Le Fevre",
+    "email": "kle2@artisteer.com",
+    "gender": "Male"
+  },
+  {
+    "id": 4,
+    "fullName": "Worthy Gloster",
+    "email": "wgloster3@360.cn",
+    "gender": "Male"
+  },
+  {
+    "id": 5,
+    "fullName": "Jane Gecke",
+    "email": "jgecke4@nydailynews.com",
+    "gender": "Female"
+  },
+  {
+    "id": 6,
+    "fullName": "Roxie Schriren",
+    "email": "rschriren5@symantec.com",
+    "gender": "Female"
+  },
+  {
+    "id": 7,
+    "fullName": "Antin Ferrelli",
+    "email": "aferrelli6@freewebs.com",
+    "gender": "Male"
+  },
+  {
+    "id": 8,
+    "fullName": "Brigg MacSharry",
+    "email": "bmacsharry7@livejournal.com",
+    "gender": "Male"
+  },
+  {
+    "id": 9,
+    "fullName": "Timmy Bineham",
+    "email": "tbineham8@netscape.com",
+    "gender": "Male"
+  },
+  {
+    "id": 10,
+    "fullName": "Mirabelle Bestwick",
+    "email": "mbestwick9@last.fm",
+    "gender": "Female"
+  },
+  {
+    "id": 11,
+    "fullName": "Giraud Cammiemile",
+    "email": "gcammiemilea@phoca.cz",
+    "gender": "Male"
+  },
+  {
+    "id": 12,
+    "fullName": "Orelee Castles",
+    "email": "ocastlesb@guardian.co.uk",
+    "gender": "Female"
+  },
+  {
+    "id": 13,
+    "fullName": "Chase Burtonshaw",
+    "email": "cburtonshawc@springer.com",
+    "gender": "Male"
+  }
+]

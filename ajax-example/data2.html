@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #header {
+        text-align: center;
+        padding: 20px;
+        background-color: #ff944d;
+        color: white;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      .wrap {
+        padding: 30px 0;
+      }
+      .wrap button {
+        margin: 20px 40px 40px 0px;
+        display: inline-block;
+        padding: 10px;
+      }
+      h2 {
+        color: #ff944d;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 15px;
+        text-align: left;
+      }
+    </style>
+    <script>
+      $(document).ready(() => {
+        const getData = (id) => {
+          $.ajax({
+            url: `http://localhost:8000/get-data-with-ajax/${id}`,
+            type: 'get',
+            dataType: 'json',
+            contentType: 'application/json; charset = utf-8',
+          }).done((students) => {
+            $('.tdata').remove();
+            students.forEach((student) => {
+              //console.log(student.fullName);
+
+              $('#data-table').append(buildTemplate(student));
+            });
+          });
+        };
+
+        const buildTemplate = (data) => {
+          return `<tr class='tdata'>
+            <td>${data.id}</td>
+            <td>${data.fullName}</td>
+            <td>${data.email}</td>
+            <td>${data.gender}</td>
+          </tr>`;
+        };
+
+        $('#ajax-btn1').click(() => {
+          getData(1);
+        });
+        $('#ajax-btn2').click(() => {
+          getData(2);
+        });
+        $('#ajax-btn3').click(() => {
+          getData(3);
+        });
+      });
+    </script>
+    <h1 id="header">DEMO AJAX</h1>
+    <div class="container">
+      <div class="wrap">
+        <h2>AJAX</h2>
+        <button id="ajax-btn1">List 1</button>
+        <button id="ajax-btn2">List 2</button>
+        <button id="ajax-btn3">List 3</button>
+        <div id="display-data"><table id="data-table"></table></div>
+      </div>
+      <div class="wrap">
+        <h2>WITHOUT AJAX</h2>
+        <a href="/get-data/1"><button>List 1</button></a>
+        <a href="/get-data/2"><button>List 2</button></a>
+        <table>
+          <tr>
+            <th>First name</th>
+            <th>Last name</th>
+          </tr>
+          <tr>
+            <td>Jolynn</td>
+            <td>Nhat</td>
+          </tr>
+          <tr>
+            <td>Kenneth</td>
+            <td>Quy</td>
+          </tr>
+          <tr>
+            <td>MacSharry</td>
+            <td>Tien</td>
+          </tr>
+          <tr>
+            <td>Giraud</td>
+            <td>Thang</td>
+          </tr>
+          <tr>
+            <td>Burtonshaw</td>
+            <td>Sinh</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
